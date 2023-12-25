@@ -9,7 +9,26 @@
   <form action="." method="post">
     {% csrf_token %}
 
-    {{ form.as_p }}
+    <!-- Show if there are errors that are not connected with form fields -->
+    {{ form.non_field_errors }}
+
+    <div class="mb-3">
+      <label for="" class="inline-block mb-2">Username</label><br>
+      {{ form.username }}
+    </div>
+    <div class="mb-3">
+      <label for="" class="inline-block mb-2">Email</label><br>
+      {{ form.email }}
+    </div>
+    <div class="mb-3">
+      <label for="" class="inline-block mb-2">Password</label><br>
+      {{ form.password1 }}
+    </div>
+    <div class="mb-3">
+      <label for="" class="inline-block mb-2">Confirm Password</label><br>
+      {{ form.password2 }}
+    </div>
+
     <button class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">
       Submit
     </button>
