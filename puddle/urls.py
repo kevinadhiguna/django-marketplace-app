@@ -19,10 +19,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from core.views import index, contact # Import functions from views.py in the 'core' app
-
 urlpatterns = [
-    path('', index, name='index'),
+    path('', include('core.urls')),
     path('items/', include('item.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # <- Just to show images in local (DO NOT do this in production!)
