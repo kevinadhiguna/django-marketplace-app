@@ -6,3 +6,6 @@ class Category(models.Model):
   
   class Meta:
     verbose_name_plural = 'categories' # Fixes 'Categorys' to 'Categories'
+  
+  def __str__ (self):
+    return self.name # In order to display 'name' property of Category model, instead of hard-string 'Category object (1)' in the admin panel
