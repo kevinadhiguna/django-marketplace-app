@@ -6,9 +6,14 @@ from .models import Item
 
 def items(request):
   items = Item.objects.filter(is_sold=False)
+  query = request.GET.get('query', '')
+  
+  if query:
+    items = items.filter(name__icontains=query)
   
   return render(request, 'item/items.html', {
     'items': items,
+    'query': query,
   })
 
 # Create your views here.
