@@ -18,6 +18,7 @@ def items(request):
     'items': items,
     'query': query,
     'categories': categories,
+    'category_id': category_id,
   })
 
 # Create your views here.
