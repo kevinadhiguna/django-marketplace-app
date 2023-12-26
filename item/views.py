@@ -7,7 +7,7 @@ from .models import Item, Category
 
 def items(request):
   items = Item.objects.filter(is_sold=False)
-  category_id = request.GET.get('category_id', 0) # <- Set default category_id to 0
+  category_id = request.GET.get('category', 0) # <- Set default category_id to 0
   categories = Category.objects.all()
   query = request.GET.get('query', '')
   
@@ -18,7 +18,7 @@ def items(request):
     'items': items,
     'query': query,
     'categories': categories,
-    'category_id': category_id,
+    'category_id': int(category_id),
   })
 
 # Create your views here.
