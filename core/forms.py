@@ -1,6 +1,20 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+
+class LoginForm(AuthenticationForm):
+  username = forms.CharField(widget=forms.TextInput(attrs={
+    'placeholder': 'Your username',
+    'class': 'w-full py-4 px-6 rounded-xl',
+  }))
+  
+  password = forms.CharField(widget=forms.TextInput(attrs={
+    'placeholder': 'Your password',
+    'class': 'w-full py-4 px-6 rounded-xl',
+  }))
+  
+  # After login is successful, Django redirects to 'account/profile/' path, by default
+  # To prevent this, configure LOGIN_REDIRECT_URL in puddle/setting.py
 
 class SignUpForm(UserCreationForm):
   class Meta:
