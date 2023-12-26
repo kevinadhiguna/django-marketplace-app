@@ -7,6 +7,7 @@ from .models import Item, Category
 
 def items(request):
   items = Item.objects.filter(is_sold=False)
+  category_id = request.GET.get('category_id')
   categories = Category.objects.all()
   query = request.GET.get('query', '')
   
