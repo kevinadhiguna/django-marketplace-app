@@ -14,7 +14,7 @@ def new_conversation(request, item_pk):
   if item.created_by == request.user:
     return redirect('dashboard:index')
   
-  conversation = Conversation.objects.filter(item=item).filter(members__in=[request.user.id])
+  conversations = Conversation.objects.filter(item=item).filter(members__in=[request.user.id])
 
   if conversations:
     return redirect('conversation:detail', pk=conversation.first().id)
@@ -65,8 +65,8 @@ def detail(request, pk):
       conversation.save()
       
       return redirect('conversation:detail', pk=pk)
-    else:
-      form = ConversationMessageForm()
+  else:
+    form = ConversationMessageForm()
   
   return render(request, 'conversation/detail.html', {
     'conversation': conversation,
