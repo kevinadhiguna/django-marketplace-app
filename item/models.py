@@ -7,7 +7,7 @@ class Category(models.Model):
   
   class Meta:
     ordering = ('name',) # Order items alphabetically in the admin panel 
-    verbose_name_plural = 'categories' # Fixes 'Categorys' to 'Categories'
+    verbose_name_plural = 'Categories' # Fixes 'Categorys' to 'Categories'
   
   def __str__ (self):
     return self.name # In order to display 'name' property of Category model, instead of hard-string 'Category object (1)' in the admin panel
