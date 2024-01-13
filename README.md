@@ -6,6 +6,7 @@ Learn Django (v4.2.8) by creating a marketplace.
 
 ## To-do List:
 
+- Fix plural or singular nouns
 - [Make images have same height and width](https://stackoverflow.com/q/19414856)
 - [Use environment variables, instead of hardcoded values](https://codinggear.blog/django-environment-variables/)
 - [Find out what 'related_name' really is](https://stackoverflow.com/q/2642613)
