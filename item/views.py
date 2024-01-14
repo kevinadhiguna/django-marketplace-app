@@ -15,7 +15,8 @@ def items(request):
     items = items.filter(category_id=category_id)
   
   if query:
-    items = items.filter(Q(name__icontains=query) | Q(description__icontains=query))
+    items = items.filter(Q(name__icontains=query))
+    # items = items.filter(Q(name__icontains=query) | Q(description__icontains=query))
   
   return render(request, 'item/items.html', {
     'items': items,
