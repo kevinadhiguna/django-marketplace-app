@@ -3,7 +3,7 @@
 {% block title%}Items{% endblock %}
 
 {% block content %}
-<div class="pb-6 grid grid-cols-4 gap-4 bg-gray-100">
+<div class="pb-6 p-6 grid grid-cols-4 gap-4 bg-gray-100">
   <div class="col-span-1">
     <form action="{% url 'item:items' %}" method="get">
       <input 
@@ -24,7 +24,7 @@
 
     <ul>
       {%for category in categories %}
-      <li class="py-2 px-2 rounded-xl {% if category.id == category_id %} bg-gray-200 {% endif %}">
+      <li class="py-2 px-2 rounded-xl {% if category.id == category_id %} bg-teal-500 {% endif %}">
         <a href="{% url 'item:items' %}?query={{ query }}&category={{ category.id }}">
           {{ category.name }}
         </a>
