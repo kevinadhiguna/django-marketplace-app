@@ -175,3 +175,7 @@ python3 manage.py runserver
 ## References:
 
 - [Learn Django by Building an Online Marketplace – Python Tutorial for Beginners, by freeCodeCamp](https://youtu.be/ZxMB6Njs3ck)
+
+<br>
+
+![Hello !](https://api.visitorbadge.io/api/VisitorHit?user=kevinadhiguna&repo=django-marketplace-app&label=thanks%20for%20dropping%20in%20!&labelColor=%23000000&countColor=%23FFFFFF)
