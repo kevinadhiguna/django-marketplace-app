@@ -158,11 +158,12 @@ python3 manage.py runserver
 
 <br>
 
-## To-do list:
+## To-do list
 
 - Redirect user to a certain category page, if user clicks a particular category
 - Change the button text from `Add` to `Edit`, in the edit product page
 - Set the footer to touch the lowest screen
+- Put available routes in the docs
 - Make a Dockerfile
 - Generate `requirements.txt` ✅
 - Fix plural or singular nouns
